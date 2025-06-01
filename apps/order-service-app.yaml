@@ -3,6 +3,10 @@ kind: Application
 metadata:
   name: order-service
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: order-service=536697223481.dkr.ecr.us-east-1.amazonaws.com/order-service
+    argocd-image-updater.argoproj.io/order-service.update-strategy: latest
+    argocd-image-updater.argoproj.io/order-service.force-update: "true"
 spec:
   project: default
   source:

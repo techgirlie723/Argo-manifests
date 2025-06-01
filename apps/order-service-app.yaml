@@ -13,6 +13,7 @@ spec:
     repoURL: https://github.com/techgirlie723/k8s-manifests.git
     targetRevision: HEAD
     path: order-service
+    kustomize: {}  # <-- Add this line
   destination:
     server: https://kubernetes.default.svc
     namespace: default
